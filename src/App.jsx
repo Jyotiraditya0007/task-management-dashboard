@@ -40,7 +40,7 @@ export default function App() {
     title: '',
     message: '',
     type: 'danger',
-    onConfirm: () => {}
+    onConfirm: () => { }
   });
   const [toast, setToast] = useState(null);
 

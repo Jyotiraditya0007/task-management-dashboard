@@ -2,8 +2,7 @@
 
 A modern, high-performance, and responsive **Task Management Dashboard** built with **React**, **Vite**, and pure **Vanilla CSS**. Designed as a portfolio-ready showcase project for software developer resumes and technical interviews.
 
-![TaskFlow Dashboard Preview](https://raw.githubusercontent.com/placeholder/taskflow-banner.png)
-
+![TaskFlow Dashboard Preview](./public/preview.png)
 ---
 
 ## 🌟 Project Highlights & Live Features
