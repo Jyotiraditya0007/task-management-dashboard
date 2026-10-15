@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Kanban TaskBoard Styles
+   ========================================================================== */
+
+.kanban-board-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .kanban-board-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kanban-column {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  min-height: 480px;
+}
+
+.kanban-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.column-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.column-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-pending .column-icon-wrap {
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.col-progress .column-icon-wrap {
+  background: var(--status-progress-bg);
+  color: var(--status-progress-text);
+}
+
+.col-completed .column-icon-wrap {
+  background: var(--status-completed-bg);
+  color: var(--status-completed-text);
+}
+
+.column-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.column-subtitle {
+  font-size: 0.725rem;
+  color: var(--text-tertiary);
+}
+
+.column-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.column-badge-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+.column-add-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  background: var(--bg-surface-hover);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.column-add-btn:hover {
+  color: var(--primary-400);
+  border-color: var(--primary-500);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* Lane Cards List */
+.kanban-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.kanban-column-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  border: 2px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.kanban-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Fast Lane Mover Bar */
+.kanban-quick-lane-bar {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-lane-move {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: var(--radius-xs);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--bg-surface-hover);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.btn-lane-move:hover {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-focus);
+}
+
+.btn-lane-move.complete {
+  color: #10b981;
+}
+
+.btn-lane-move.complete:hover {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
